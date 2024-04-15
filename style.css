@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kumbh+Sans:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black-lightbox-bg: hsl(0, 0%, 0%);
+
+    --ff: "Kumbh Sans", sans-serif;
+    --fw-light: 400;
+    --fw-bold: 700;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--ff);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-inline: 2rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--Grayish-blue);
+}
+
+.container {
+    max-width: 75em;
+    margin-inline: auto;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding-block: 2em;
+    border-bottom: 2px solid var(--Light-grayish-blue);
+}
+
+.hamburger-menu {
+    display: none;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navigation-menu {
+    display: flex;
+    gap: 1.5em;
+}
+
+.cart-profile-container {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+}
+
+.avatar {
+    width: 45px;
+}
+
+
+@media (max-width: 978px) {
+    .navigation-menu {
+        /* display: none; */
+        flex-direction: column;
+        place-content: center;
+        align-items: center;
+        gap: 0;
+        position: absolute;
+        top: 111px;
+        left: 0;
+        width: 50%;
+        height: calc(100vh - 111px);
+        background-color: var(--Light-grayish-blue);
+
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav {
+        justify-content: end;
+    }
+
+    .navigation-menu li {
+        width: 100%;
+        text-align: center;
+        padding-block: 2em;
+    }
+
+    .navigation-menu li:hover {
+        background-color: var(--Pale-orange);
+    }
+
+    .navigation-menu a {
+        width: 100%;
+    }
+
+
+}
